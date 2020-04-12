@@ -1,0 +1,24 @@
+{
+  "name": "jwt_token_authorization",
+  "version": "1.0.0",
+  "description": "> JSON Web Token 은 웹 표준으로서 두 개체 JSON 객체를 사용하여 가볍고, 자가수용적인 방식으로 정보를 안전성 있게 전달해줍니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taehyundev/Jwt_Token_Authorization.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taehyundev/Jwt_Token_Authorization/issues"
+  },
+  "homepage": "https://github.com/taehyundev/Jwt_Token_Authorization#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  }
+}

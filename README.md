@@ -18,9 +18,39 @@ JWT 는 자가수용적이므로, 두 개체 사이에서 손쉽게 전달 될 �
 
 
 
+
+
 JWT 는 `.` 을 구분자로 3가지의 문자열로 되어있습니다. 구조는 다음과 같이 이루어져있습니다:
 
 
 
 헤더.내용.서명가  JWT의 생김새이다.
 
+
+
+#### JWT를 사용하기 전에
+
+```
+npm install jsonwetoken
+```
+
+#### Token 생성
+
+```javascript
+    var jwt = require('jsonwebtoken')
+    var token = jwt.sign({token:"taehyundev"}, 'secret_key');
+    // 위와 같은 형태로 토큰을 생성한다.
+    // encode가 된다. (보안성 높음)
+```
+
+#### Token의 복호화
+
+```javascript
+    var jwt = require('jsonwebtoken')
+    var decoded = jwt.verify(token, 'secret_key')
+    //이러한 형태로 토큰을 원문 즉 Plain text 의 형태로 받을 수 있게 된다.
+
+```
+
+#### 준비중 :: 
+> 로그인 로그아웃 폼을 세션이 아닌 Token 형태로 돌아가게끔 하는 것이 가장 가까운 목표

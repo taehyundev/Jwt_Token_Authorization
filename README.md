@@ -49,8 +49,13 @@ npm install jsonwetoken
     var jwt = require('jsonwebtoken')
     var decoded = jwt.verify(token, 'secret_key')
     //이러한 형태로 토큰을 원문 즉 Plain text 의 형태로 받을 수 있게 된다.
-
 ```
 
+#### Token 생성 (유효기간 설정)
+```javascript
+    var jwt = require('jsonwebtoken') 
+    var token = jwt.sign({plain:'taehyundev'}, exp:Math.floor(Date.now() /1000 + 60)}, 'secret_key')
+    //이러한 형태로 60초 즉 1분 동안의 토큰의 유효기간을 부여합니다.
+```
 #### 준비중 :: 
 > 로그인 로그아웃 폼을 세션이 아닌 Token 형태로 돌아가게끔 하는 것이 가장 가까운 목표

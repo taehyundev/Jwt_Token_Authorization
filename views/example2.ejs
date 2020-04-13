@@ -6,11 +6,12 @@
      <title>Document</title>
  </head>
  <body>
-     Hello This is JWT example<br>
-     <a href="/example1">example1</a><br>
-     <a href="/example2">example2</a><br>
-     <a href="/example3">example3</a><br>
-     <a href="/example4">example4</a>
-
+    <form action="/example2/encode" method="POST">
+        Plain Text : <input type="text" name="aaa" required><br><br>
+        <input type="submit">
+    </form>
+    <br>
+    <h1>result</h1>
+    <br><%=token%>
  </body>
  </html>

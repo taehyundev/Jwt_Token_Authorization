@@ -17,5 +17,16 @@ router.post('/decode',function(req,res){
     })
 })
 
-
+router.post('/auth',function(req,res){
+    var token = req.body.loginCode
+    console.log(token);
+    jwt.verify(token, 'secret_key',function(err,decode){
+        if(err){
+            res.redirect('/');
+        }
+        if(decode){
+        res.render('auth_example.ejs', {'token':decode.plain})
+        }
+    })
+})
 module.exports = router;

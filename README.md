@@ -59,3 +59,10 @@ npm install jsonwetoken
 ```
 #### 준비중 :: 
 > 로그인 로그아웃 폼을 세션이 아닌 Token 형태로 돌아가게끔 하는 것이 가장 가까운 목표
+
+#### 로그인 메커니즘
+ID, Password를 받으면, response로 token을 넘겨주고 그걸 localStorage에 저장합니다.
+
+그 후에 만약에 서버에 요청을 할 일이 생긴다면 header에 token을 넣어서 보내주면,서버는 token을 분석해서 현재 유저를 확인을한다.
+
+알맞은 요청이라면 제대로 된 값을 보여준다.

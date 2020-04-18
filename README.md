@@ -66,3 +66,6 @@ ID, Password를 받으면, response로 token을 넘겨주고 그걸 localStorage
 그 후에 만약에 서버에 요청을 할 일이 생긴다면 header에 token을 넣어서 보내주면,서버는 token을 분석해서 현재 유저를 확인을한다.
 
 알맞은 요청이라면 제대로 된 값을 보여준다.
+
+#### passport 와 Jwt 를 이용한 사용자 인증
+https://futuregate.tistory.com/11?category=728114 를 참조하여 만들 예정이다.

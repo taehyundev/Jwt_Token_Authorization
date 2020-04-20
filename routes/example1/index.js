@@ -8,7 +8,6 @@ router.get('/', function(req,res){
     console.log("example 1 Check")
     var info ={'defaultInfo':defaultInfo.sub,'token':token}
     console.log(info)
-    var decoded_data = jwt.verify(token, 'secret_key');
     res.render('example1.ejs',info );
 })
 
